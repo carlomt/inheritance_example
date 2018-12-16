@@ -1,7 +1,7 @@
 #----------------------------------------------------------------------------
 # Setup the project
-cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
-project(inheritance_example)
+cmake_minimum_required(VERSION 3.1 FATAL_ERROR)
+project(inheritance_example CXX)
 
 #----------------------------------------------------------------------------
 # Locate sources and headers for this project
