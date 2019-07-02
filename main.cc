@@ -38,6 +38,7 @@ int main () {
 
 
   cout<<"testing polymorphism:"<<endl;
+  //c++98 style loop
   for(size_t i=0; i<AllMyFigures.size(); i++)
     {
       //thanks to polymrphism and the virtual attribute of the method "area()"
@@ -45,7 +46,11 @@ int main () {
       cout<<" i: "<<i<<" area: "<<AllMyFigures[i]->area()<<endl;
     }
 
-
+  //c++11 style loop
+  for(const auto& figure : AllMyFigures)
+    {
+      cout<<" area: "<<figure->area()<<endl;
+    }
   // Circle(1,2);
   
   return 0;

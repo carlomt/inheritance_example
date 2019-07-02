@@ -2,7 +2,7 @@ class Rectangle : public Polygon
 {
 public:
   Rectangle(double x=0., double y=0.) : Polygon(x, y) {};
-  virtual double area()
+  virtual double area() override
   {
     return width*height;
   };
