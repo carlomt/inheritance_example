@@ -10,15 +10,17 @@ using std::endl;
 using std::vector;
 
 int main () {
-  Rectangle rect1(4, 5);
-  Triangle trgl1(4, 5);
+  cout<<endl;
   
-  Rectangle rect2;
-  Triangle trgl2;
+  Rectangle rect1("rectangle 1", 4, 5);
+  Triangle  trgl1("triangle 1",  4, 5);
+  
+  Rectangle rect2("rectangle 2");
+  Triangle  trgl2("triangle 2");
   rect2.set_values(4,5);
   trgl2.set_values(4,5);
-  cout << rect1.area() << endl;
-  cout << trgl2.area() << endl;
+  cout <<"Rectangle 1 area: "<< rect1.area() << endl;
+  cout <<"Triangle 2 area:  "<< trgl2.area() << endl;
 
   //WRONG!
   //because area is pure virtual you can't istantiate a polygon, therefore you can't make a std::vector of instance
@@ -37,21 +39,27 @@ int main () {
   AllMyFigures.push_back(&trgl2);
 
 
-  cout<<"testing polymorphism:"<<endl;
+  cout<<endl<<"testing polymorphism:"<<endl;
   //c++98 style loop
   for(size_t i=0; i<AllMyFigures.size(); i++)
     {
       //thanks to polymrphism and the virtual attribute of the method "area()"
       //you can get the correct formula even if they are now considered Polygon pointers
-      cout<<" i: "<<i<<" area: "<<AllMyFigures[i]->area()<<endl;
+      cout<<" i: "<<i<<" polygon type: "<<AllMyFigures[i]->GetType()
+	  <<" \t name: "<<AllMyFigures[i]->GetName()
+	  <<" \t area: "<<AllMyFigures[i]->area()<<endl;
     }
 
   //c++11 style loop
+  cout<<endl<<"c++11 loop:"<<endl;
   for(const auto& figure : AllMyFigures)
     {
-      cout<<" area: "<<figure->area()<<endl;
+      cout<<"object type: "<<typeid(figure).name()
+	  <<" \t polygon type: "<<figure->GetType()	
+	  <<" \t polygon name: "<<figure->GetName()
+	  <<" \t area: "<<figure->area()<<endl;
     }
   // Circle(1,2);
-  
+  cout<<endl;
   return 0;
 }

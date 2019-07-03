@@ -1,6 +1,8 @@
 class Circle : Polygon
 {
 public:
-  Circle(double x=0, double y=0) : Polygon(x, y) {};
+  Circle(const std::string n="",
+	 const double x=0, const double y=0)
+    : Polygon(n, x, y, "circle") {};
 
 };

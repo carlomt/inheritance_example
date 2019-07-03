@@ -1,8 +1,10 @@
 class Rectangle : public Polygon
 {
 public:
-  Rectangle(double x=0., double y=0.) : Polygon(x, y) {};
-  virtual double area() override
+  Rectangle(const std::string n="",
+	    double x=0., double y=0.)
+    : Polygon(n, x, y, "rectangle") {};
+  virtual double area() const override
   {
     return width*height;
   };

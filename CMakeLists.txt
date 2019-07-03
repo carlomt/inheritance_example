@@ -1,6 +1,7 @@
 #----------------------------------------------------------------------------
 # Setup the project
 cmake_minimum_required(VERSION 3.1 FATAL_ERROR)
+#set c++11 standard
 set (CMAKE_CXX_STANDARD 11)
 
 project(inheritance_example CXX)
@@ -9,14 +10,14 @@ project(inheritance_example CXX)
 # Locate sources and headers for this project
 #
 include_directories(${PROJECT_SOURCE_DIR}/include)
-#file(GLOB pkg_sources ${PROJECT_SOURCE_DIR}/src/*.cc)
-file(GLOB pkg_headers ${PROJECT_SOURCE_DIR}/include/*.hh)
+#file(GLOB sources ${PROJECT_SOURCE_DIR}/src/*.cc)
+file(GLOB headers ${PROJECT_SOURCE_DIR}/include/*.hh)
 
 #----------------------------------------------------------------------------
 # Set total list of headers and sources
 #
 #set(sources ${pkg_sources})
-set(headers ${pkg_headers})
+#set(headers ${pkg_headers})
 
 #----------------------------------------------------------------------------
 # Setup ROOT include directories and compile definitions
