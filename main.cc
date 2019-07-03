@@ -1,3 +1,4 @@
+#include <typeinfo>
 #include <iostream>
 #include <vector>
 #include "Polygon.hh"
