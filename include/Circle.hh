@@ -1,3 +1,6 @@
+#ifndef CICRLE_HH
+#define CIRCLE_HH
+
 class Circle : Polygon
 {
 public:
@@ -7,3 +10,5 @@ public:
     : Polygon(n, x, y, "circle") {};
 
 };
+
+#endif

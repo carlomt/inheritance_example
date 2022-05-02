@@ -1,3 +1,6 @@
+#ifndef POLYGON_HH
+#define POLYGON_HH
+
 #include <string>
 
 class Polygon {
@@ -25,3 +28,5 @@ public:
   inline virtual std::string GetName() const { return name; };
 
 };
+
+#endif

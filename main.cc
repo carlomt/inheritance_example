@@ -6,6 +6,8 @@
 #include "Triangle.hh"
 #include "Circle.hh"
 
+#include <algorithm>  
+
 using std::cout;
 using std::endl;
 using std::vector;
@@ -63,5 +65,15 @@ int main () {
   // Circle(1,2);
   cout<<endl;
 
+  // //std::for_each loop
+  // cout<<endl<<"std::for_each loop:"<<endl;
+  // std::for_each(AllMyFigures.begin(), AllMyFigures.end(), [](const auto figure)
+  // {
+  //     cout<<"object type: "<<typeid(figure).name()
+  // 	  <<" \t polygon type: "<<figure->GetType()	
+  // 	  <<" \t polygon name: "<<figure->GetName()
+  // 	  <<" \t area: "<<figure->area()<<endl;
+  // });
+  
   return 0;
 }

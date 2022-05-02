@@ -1,3 +1,6 @@
+#ifndef TRIANGLE_HH
+#define TRIAGNLE_HH
+
 class Triangle : public Polygon 
 {
  public:
@@ -12,3 +15,5 @@ class Triangle : public Polygon
   };
 
 };
+
+#endif

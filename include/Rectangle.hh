@@ -1,3 +1,6 @@
+#ifndef RECTANGLE_HH
+#define RECTANGLE_HH
+
 class Rectangle : public Polygon
 {
 public:
@@ -12,3 +15,5 @@ public:
   };
 
 };
+
+#endif
