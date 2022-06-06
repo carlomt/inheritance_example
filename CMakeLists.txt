@@ -43,6 +43,6 @@ add_executable(main.x main.cc ${sources} ${headers})
 #----------------------------------------------------------------------------
 # Install the executable to 'bin' directory under CMAKE_INSTALL_PREFIX
 #
-install(TARGETS main.x DESTINATION bin)
+#install(TARGETS main.x DESTINATION bin)
 
 
