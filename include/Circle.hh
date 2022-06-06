@@ -1,4 +1,4 @@
-#ifndef CICRLE_HH
+#ifndef CIRCLE_HH
 #define CIRCLE_HH
 
 class Circle : Polygon

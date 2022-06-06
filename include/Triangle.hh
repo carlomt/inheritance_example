@@ -1,5 +1,5 @@
 #ifndef TRIANGLE_HH
-#define TRIAGNLE_HH
+#define TRIANGLE_HH
 
 class Triangle : public Polygon 
 {
