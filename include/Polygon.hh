@@ -17,7 +17,8 @@ public:
   Polygon(const std::string n,
 	  const double x, const double y,
 	  const std::string t="polygon")
-    : width(x), height(y), name(n), type(t) {}
+    : width(x), height(y), type(t), name(n)
+  {}
 
   void set_values (int a, int b) { width=a; height=b;};
 
