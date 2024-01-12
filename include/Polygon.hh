@@ -20,7 +20,7 @@ public:
     : width(x), height(y), type(t), name(n)
   {}
 
-  void set_values (int a, int b) { width=a; height=b;};
+  void set_values (const int a, const int b) { width=a; height=b;};
 
   virtual double area() const =0;
 
